@@ -1,5 +1,24 @@
 {
   "dependencies": {
+    "com.meta.xr.depthapi": {
+      "version": "https://github.com/oculus-samples/Unity-DepthAPI.git?path=/Packages/com.meta.xr.depthapi",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.xr.oculus": "4.2.0-exp-env-depth.1"
+      },
+      "hash": "13b6d11e6ace5abde6801884eb9bf9313385133e"
+    },
+    "com.meta.xr.depthapi.urp": {
+      "version": "https://github.com/oculus-samples/Unity-DepthAPI.git?path=/Packages/com.meta.xr.depthapi.urp",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.xr.oculus": "4.2.0-exp-env-depth.1",
+        "com.unity.render-pipelines.universal": "14.0.8"
+      },
+      "hash": "13b6d11e6ace5abde6801884eb9bf9313385133e"
+    },
     "com.unity.burst": {
       "version": "1.8.8",
       "depth": 1,
@@ -167,11 +186,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.oculus": {
-      "version": "4.0.0",
-      "depth": 0,
+      "version": "4.2.0-exp-env-depth.1",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.xr.management": "4.2.0"
+        "com.unity.xr.management": "4.4.0"
       },
       "url": "https://packages.unity.com"
     },
