@@ -429,15 +429,16 @@ public class OVRPluginUpdater : IOVRPluginInfoSupplier
 
     private static bool ShouldAttemptPluginUpdate()
     {
-        if (unityRunningInBatchmode || OVRPluginInfo.IsInsidePackageDistribution())
-        {
-            return false;
-        }
-        else
-        {
-            return !UnitySupportsEnabledAndroidPlugin() ||
-                   (autoUpdateEnabled && !restartPending && !Application.isPlaying);
-        }
+        /*         if (unityRunningInBatchmode || OVRPluginInfo.IsInsidePackageDistribution())
+                {
+                    return false;
+                }
+                else
+                {
+                    return !UnitySupportsEnabledAndroidPlugin() ||
+                           (autoUpdateEnabled && !restartPending && !Application.isPlaying);
+                } */
+        return false; //to fix bug of update prompt showing even after updating
     }
 
     private static void DisableAllUtilitiesPluginPackages()
