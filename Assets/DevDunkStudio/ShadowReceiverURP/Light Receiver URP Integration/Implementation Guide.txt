@@ -1,0 +1,9 @@
+-- Installation --
+
+Make sure you have purchased and installed Light Receiver URP (Will be live when Light Receiver is accepted: https://assetstore.unity.com/packages/vfx/shaders/260532)
+Import the Unity Package in "Assets\ShadowReceiver\Assets\DevDunkStudio\ShadowReceiverURP\Light Receiver URP Integration"
+Assign the Light+Shadow shader to your shadow/light receiving mesh renderer (usually AR plane)
+
+-- Parameters ==
+You can change the specular lighting with Specular and smoothness
+You can change the Main Light shadows with the MainLightShadows color. If you do not want main light shadows, you should put the Alpha channel at 0

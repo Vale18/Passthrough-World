@@ -2,7 +2,6 @@
 #define CUSTOM_LIGHTING_INCLUDED
 
 /*MIT License
-
 Copyright(c) 2020 Cyanilux
 @Cyanilux | https://github.com/Cyanilux/URP_ShaderGraphCustomLighting
 
@@ -47,63 +46,114 @@ SOFTWARE. */
 	#endif
 #endif
 
-/*
-- Samples the Shadowmap for the Main Light, based on the World Position passed in. (Position node)
-- Works in an Unlit Graph with all Shadow Cascade options, see above fix! :)
-- For shadows to work in the Unlit Graph, the following keywords must be defined in the blackboard :
-	- Boolean Keyword, Global Multi-Compile "_MAIN_LIGHT_SHADOWS" (must be present to also stop the others being stripped from builds)
-- For a PBR/Lit Graph, these keywords are already handled for you.
-*/
+#ifndef SHADERGRAPH_PREVIEW
+	#if UNITY_VERSION < 202220
+	/*
+	GetMeshRenderingLayer() is only available in 2022.2+
+	Previous versions need to use GetMeshRenderingLightLayer()
+	*/
+	uint GetMeshRenderingLayer(){
+		return GetMeshRenderingLightLayer();
+	}
+	#endif
+#endif
 
-#pragma multi_compile _MAIN_LIGHT_SHADOWS
-void MainLightShadows_float (float3 WorldPos, out float ShadowAtten){
+//Samples the Shadowmap for the Main Light, based on the World Position passed in. (Position node)
+void MainLightShadows_float (float3 WorldPos, out half ShadowAtten){
 	#ifdef SHADERGRAPH_PREVIEW
 		ShadowAtten = 1;
 	#else
-		float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
-		
+		#if defined(_MAIN_LIGHT_SHADOWS_SCREEN) && !defined(_SURFACE_TYPE_TRANSPARENT)
+			float4 shadowCoord = ComputeScreenPos(TransformWorldToHClip(WorldPos));
+		#else
+			float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
+		#endif		
+		   
 		#if VERSION_GREATER_EQUAL(10, 1)
 			ShadowAtten = MainLightShadow(shadowCoord, WorldPos, half4(1,1,1,1), _MainLightOcclusionProbes);
 		#else
 			ShadowAtten = MainLightRealtimeShadow(shadowCoord);
 		#endif
-
-		/*
-		- Used to use this, but while it works in editor it doesn't work in builds. :(
-		- Bypasses need for _MAIN_LIGHT_SHADOWS (/MAIN_LIGHT_CALCULATE_SHADOWS), so won't error in an Unlit Graph even at no/1 cascades.
-		- Note it can kinda break/glitch if no shadows are cast on the screen.
-
-		ShadowSamplingData shadowSamplingData = GetMainLightShadowSamplingData();
-		half4 shadowParams = GetMainLightShadowParams();
-		ShadowAtten = SampleShadowmap(TEXTURE2D_ARGS(_MainLightShadowmapTexture, sampler_MainLightShadowmapTexture),
-							shadowCoord, shadowSamplingData, shadowParams, false);
-		*/
 	#endif
 	}
 
-	void MainLightShadows_half (half3 WorldPos, out half ShadowAtten){
+//Samples the Shadowmap for the Main Light, based on the World Position passed in. (Position node)
+void MainLightShadows_half (half3 WorldPos, out half ShadowAtten){
 	#ifdef SHADERGRAPH_PREVIEW
 		ShadowAtten = 1;
 	#else
-		half4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
+		#if defined(_MAIN_LIGHT_SHADOWS_SCREEN) && !defined(_SURFACE_TYPE_TRANSPARENT)
+			half4 shadowCoord = ComputeScreenPos(TransformWorldToHClip(WorldPos));
+		#else
+			half4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
+		#endif	
 		
 		#if VERSION_GREATER_EQUAL(10, 1)
 			ShadowAtten = MainLightShadow(shadowCoord, WorldPos, half4(1,1,1,1), _MainLightOcclusionProbes);
 		#else
 			ShadowAtten = MainLightRealtimeShadow(shadowCoord);
 		#endif
-
-		/*
-		- Used to use this, but while it works in editor it doesn't work in builds. :(
-		- Bypasses need for _MAIN_LIGHT_SHADOWS (/MAIN_LIGHT_CALCULATE_SHADOWS), so won't error in an Unlit Graph even at no/1 cascades.
-		- Note it can kinda break/glitch if no shadows are cast on the screen.
-
-		ShadowSamplingData shadowSamplingData = GetMainLightShadowSamplingData();
-		half4 shadowParams = GetMainLightShadowParams();
-		ShadowAtten = SampleShadowmap(TEXTURE2D_ARGS(_MainLightShadowmapTexture, sampler_MainLightShadowmapTexture),
-							shadowCoord, shadowSamplingData, shadowParams, false);
-		*/
 	#endif
 }
 
+void AdditionalShadows_float (float3 WorldPosition, float3 Normal, out float ShadowAtten){
+	ShadowAtten = 1;
+	#ifdef SHADERGRAPH_PREVIEW
+		ShadowAtten = 1;
+	#else
+
+	uint pixelLightCount = GetAdditionalLightsCount();
+	uint meshRenderingLayers = GetMeshRenderingLayer();
+
+	// For Foward+ the LIGHT_LOOP_BEGIN macro will use inputData.normalizedScreenSpaceUV, inputData.positionWS, so create that:
+	InputData inputData = (InputData)0;
+	float4 screenPos = ComputeScreenPos(TransformWorldToHClip(WorldPosition));
+	inputData.normalizedScreenSpaceUV = screenPos.xy / screenPos.w;
+	inputData.positionWS = WorldPosition;
+
+	LIGHT_LOOP_BEGIN(pixelLightCount)
+		Light light = GetAdditionalLight(lightIndex, WorldPosition, half4(1,1,1,1));
+	#ifdef _LIGHT_LAYERS
+	if (IsMatchingLightLayer(light.layerMask, meshRenderingLayers))
+	#endif
+		{
+			if(light.distanceAttenuation != 0 && dot(Normal,_AdditionalLightsPosition[lightIndex].xyz) > 0)
+			{
+				ShadowAtten *= light.shadowAttenuation;
+			}
+		}
+	LIGHT_LOOP_END
+	#endif
+}
+
+void AdditionalShadows_half (half3 WorldPosition, float3 Normal,  out half ShadowAtten){
+	ShadowAtten = 1;
+
+	#ifdef SHADERGRAPH_PREVIEW
+		ShadowAtten = 1;
+	#else
+
+	uint pixelLightCount = GetAdditionalLightsCount();
+	uint meshRenderingLayers = GetMeshRenderingLayer();
+
+	// For Foward+ the LIGHT_LOOP_BEGIN macro will use inputData.normalizedScreenSpaceUV, inputData.positionWS, so create that:
+	InputData inputData = (InputData)0;
+	half4 screenPos = ComputeScreenPos(TransformWorldToHClip(WorldPosition));
+	inputData.normalizedScreenSpaceUV = screenPos.xy / screenPos.w;
+	inputData.positionWS = WorldPosition;
+
+	LIGHT_LOOP_BEGIN(pixelLightCount)
+		Light light = GetAdditionalLight(lightIndex, WorldPosition, half4(1,1,1,1));
+	#ifdef _LIGHT_LAYERS
+		if (IsMatchingLightLayer(light.layerMask, meshRenderingLayers))
+	#endif
+		{
+			if(light.distanceAttenuation != 0 && dot(Normal,_AdditionalLightsPosition[lightIndex].xyz) > 0)
+			{
+				ShadowAtten *= light.shadowAttenuation;
+			}
+		}
+	LIGHT_LOOP_END
+	#endif
+}
 #endif // CUSTOM_LIGHTING_INCLUDED

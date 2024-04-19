@@ -1,0 +1,5 @@
+By default this package now works in Unity 2021.3+ for better performance and stability across platforms.
+
+2020 is supported through the Unity 2020 shaders.unitypackage shader package
+
+You can delete this folder if your project is working with Shadow Receiver if needed
