@@ -2016,13 +2016,37 @@ PrefabInstance:
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
       propertyPath: SceneSettings.RoomPrefabs.Array.size
-      value: 9
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
+        type: 3}
+      propertyPath: SceneSettings.RoomPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 5618556046422172173, guid: 531aeca35d703a64cb0e1fd73a128fc0,
+        type: 3}
+    - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
+        type: 3}
+      propertyPath: SceneSettings.RoomPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 5618556046422172173, guid: 4b454e8ccd6764ccdbcd91586969863f,
+        type: 3}
+    - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
+        type: 3}
+      propertyPath: SceneSettings.RoomPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 5618556046422172173, guid: 029ede24e76b24d0888dc235dd0b96f2,
+        type: 3}
+    - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
+        type: 3}
+      propertyPath: SceneSettings.RoomPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 5618556046422172173, guid: caa3755f1f2184eb7a9fd17b7cf1f1d3,
+        type: 3}
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
       propertyPath: SceneSettings.RoomPrefabs.Array.data[4]
       value: 
-      objectReference: {fileID: 5618556046422172173, guid: 531aeca35d703a64cb0e1fd73a128fc0,
+      objectReference: {fileID: 1766085727792645261, guid: 989283c9dcb36a24aac11a601001dce0,
         type: 3}
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
@@ -2313,17 +2337,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnOnStart: 1
   PrefabsToSpawn:
-  - Labels: 64
+  - Labels: 32
     Prefabs:
-    - {fileID: 4400601064279750578, guid: 91e0647192dec0a42a85968f1fd4bd78, type: 3}
+    - {fileID: 6770153141546365202, guid: f51945cfbba19ea45a193b1ef476b7f2, type: 3}
     MatchAspectRatio: 0
     CalculateFacingDirection: 0
     Scaling: 1
     Alignment: 0
     IgnorePrefabSize: 0
-  - Labels: 32
+  - Labels: 64
     Prefabs:
-    - {fileID: 6770153141546365202, guid: f51945cfbba19ea45a193b1ef476b7f2, type: 3}
+    - {fileID: 4400601064279750578, guid: 91e0647192dec0a42a85968f1fd4bd78, type: 3}
     MatchAspectRatio: 0
     CalculateFacingDirection: 0
     Scaling: 1

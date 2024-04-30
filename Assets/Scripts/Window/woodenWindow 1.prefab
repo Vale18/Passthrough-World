@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 3916376815931354376}
   - component: {fileID: 141327254442926765}
   - component: {fileID: 2743518088639420007}
+  - component: {fileID: -4270132921614702338}
   m_Layer: 0
   m_Name: woodenWindow 1
   m_TagString: Untagged
@@ -58,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 4400601064279750578}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.05}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -117,6 +118,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-4270132921614702338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4400601064279750578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96034b6d4fccfac4c9804e3344c6fcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0.07}
 --- !u!1 &5906572341903137844
 GameObject:
   m_ObjectHideFlags: 0
