@@ -2311,11 +2311,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e76943ac7e7394f3e969f0c048b26639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnOnStart: 2
+  SpawnOnStart: 0
   MeshMaterial: {fileID: 2100000, guid: 9a5d762459be2034d99532e2ecfe2375, type: 2}
-  BorderSize: 0.2
+  BorderSize: 0
   Colliders: 1
-  CutHoles: 0
+  CutHoles: 96
   castShadows: 0
   hideMesh: 0
   textureCoordinateModes:
@@ -2339,18 +2339,18 @@ MonoBehaviour:
   PrefabsToSpawn:
   - Labels: 32
     Prefabs:
-    - {fileID: 6770153141546365202, guid: f51945cfbba19ea45a193b1ef476b7f2, type: 3}
-    MatchAspectRatio: 0
+    - {fileID: 6770153141546365202, guid: 52e67cda158a48b4d9e747d2040013ef, type: 3}
+    MatchAspectRatio: 1
     CalculateFacingDirection: 0
-    Scaling: 1
-    Alignment: 0
+    Scaling: 0
+    Alignment: 2
     IgnorePrefabSize: 0
   - Labels: 64
     Prefabs:
     - {fileID: 3805901535633295359, guid: 838229c14eff6ca4cb6fa56f521c773a, type: 3}
     MatchAspectRatio: 0
     CalculateFacingDirection: 1
-    Scaling: 1
+    Scaling: 0
     Alignment: 0
     IgnorePrefabSize: 0
   SeedValue: 0
