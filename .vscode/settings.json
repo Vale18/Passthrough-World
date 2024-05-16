@@ -52,5 +52,6 @@
         "temp/":true,
         "Temp/":true
     },
-    "diffEditor.codeLens": true
+    "diffEditor.codeLens": true,
+    "dotnet.preferCSharpExtension": true
 }
