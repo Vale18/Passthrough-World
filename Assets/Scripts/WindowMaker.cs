@@ -1,3 +1,4 @@
+using Meta.XR.BuildingBlocks;
 using UnityEngine;
 
 public class WindowMaker : MonoBehaviour
@@ -8,13 +9,14 @@ public class WindowMaker : MonoBehaviour
     private bool isInitialized;
     private int wallLayerMask;
     private AudioSource audioSource;
-
+    private SpatialAnchorCoreBuildingBlock spatialAnchor;
     public void Initialized()
     {
         isInitialized = true;
         wallLayerMask = LayerMask.GetMask("Wall");
         debugVisual = Instantiate(debugVisual);
         audioSource = GetComponent<AudioSource>();
+        spatialAnchor = FindObjectOfType<SpatialAnchorCoreBuildingBlock>();
     }
 
     void Update()
@@ -35,6 +37,7 @@ public class WindowMaker : MonoBehaviour
                 Vector3 placementPosition = hit.point + hit.normal * 0.01f;
 
                 Instantiate(prefabToPlace, placementPosition, rotation);
+                spatialAnchor.InstantiateSpatialAnchor(prefabToPlace,placementPosition,rotation);
                 /* audioSource.Play(); */
             }
         }
