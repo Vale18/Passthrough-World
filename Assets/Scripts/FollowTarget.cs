@@ -16,6 +16,7 @@ public class FollowTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.destination = target.transform.position;
+        Vector3 infrontOfTarget = target.transform.position + target.transform.forward * 0.3f;
+        agent.destination = infrontOfTarget;
     }
 }

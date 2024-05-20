@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: RockCluster_Mat
-  m_Shader: {fileID: -6465566751694194690, guid: 5666065488ed57a4d9f76658a82b25c7,
+  m_Shader: {fileID: -6465566751694194690, guid: 7f57b0c643f528f4297b72348cab9faf,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -129,7 +129,7 @@ Material:
     - _Detailstrength: 0.28
     - _DstBlend: 0
     - _Float4: 0.13
-    - _Globaltiling: 0.13
+    - _Globaltiling: 0.163
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -152,7 +152,7 @@ Material:
     m_Colors:
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _GlobalColor: {r: 0.5882353, g: 0.5294118, b: 0.40784317, a: 1}
+    - _GlobalColor: {r: 1, g: 1, b: 1, a: 1}
     - _ObjectColor: {r: 0.86764705, g: 0.86764705, b: 0.86764705, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &8682799994886272866

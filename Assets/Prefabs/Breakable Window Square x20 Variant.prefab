@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 034a7b38b4ee669428a9e89b0d46df8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToPlace: {fileID: 3011821110136174006, guid: a05f35e4d156215438a0228535c17e63,
+  prefabToPlace: {fileID: 7481702862866739386, guid: fbebe217fb9683c448040caba5d65724,
     type: 3}
 --- !u!4 &3805901535633660895 stripped
 Transform:
