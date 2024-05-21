@@ -37,7 +37,6 @@ public class WindowMaker : MonoBehaviour
                 Vector3 placementPosition = hit.point + hit.normal * 0.01f;
 
                 Instantiate(prefabToPlace, placementPosition, rotation);
-                spatialAnchor.InstantiateSpatialAnchor(prefabToPlace,placementPosition,rotation);
                 /* audioSource.Play(); */
             }
         }
