@@ -2040,7 +2040,7 @@ PrefabInstance:
         type: 3}
       propertyPath: SceneLoadedEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1240914185}
+      objectReference: {fileID: 0}
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
       propertyPath: SceneLoadedEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
@@ -2114,7 +2114,7 @@ PrefabInstance:
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
       propertyPath: <SceneLoadedEvent>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
@@ -2175,7 +2175,7 @@ PrefabInstance:
         type: 3}
       propertyPath: <SceneLoadedEvent>k__BackingField.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1240914185}
+      objectReference: {fileID: 0}
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
       propertyPath: <SceneLoadedEvent>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -2349,10 +2349,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 984354080134106425, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1240914185}
-    - targetCorrespondingSourceObject: {fileID: 984354080134106425, guid: c2e00db6d2dfa42ac8d821db8d493a44,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1240914186}
     - targetCorrespondingSourceObject: {fileID: 984354080134106425, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
@@ -2443,22 +2439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 663f5ddb050dec440a46c22fed06f20e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1240914185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240914179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71b5f61a625c64e46b77fb58e70cb7ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabToPlace: {fileID: 4400601064279750578, guid: 91e0647192dec0a42a85968f1fd4bd78,
-    type: 3}
-  debugVisual: {fileID: 4186575528970113970, guid: ffc90817355fad24e944c2dcbd0de677,
-    type: 3}
 --- !u!82 &1240914186
 AudioSource:
   m_ObjectHideFlags: 0
