@@ -113,6 +113,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100000, guid: e4f2d313950d8d74791d04ac9d9974ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e4f2d313950d8d74791d04ac9d9974ac, type: 3}
       propertyPath: m_Name
       value: Breakable Window DOOR
@@ -157,6 +161,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e4f2d313950d8d74791d04ac9d9974ac, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -188,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 034a7b38b4ee669428a9e89b0d46df8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToPlace: {fileID: 5515827994304028884, guid: 6523f76ee42081a45a5ddf1a8abccd78,
+  prefabToPlace: {fileID: 1843556239745010346, guid: 4707c86dd1f0b984ba166f8d749263a8,
     type: 3}
 --- !u!4 &3805901535633660895 stripped
 Transform:
