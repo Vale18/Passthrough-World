@@ -1,0 +1,254 @@
+fileFormatVersion: 2
+guid: 518e0e13ce319784da4b2f689707a2bf
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default_Material
+    second: {fileID: 2100000, guid: 20421bf37242f5d498cf5d17002b8f51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Saeulen_Texture
+    second: {fileID: 2100000, guid: 080c713c9ee6ce840afc0b689f2cb778, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_Prefab_PlasterWall
+    second: {fileID: 2100000, guid: f3901d011c24acf439ccaa58255da79c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Bild_Texture
+    second: {fileID: 2100000, guid: 6dbc3788e1db0b443944b0ec100e9070, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Boden_Texture
+    second: {fileID: 2100000, guid: 72b5ca0dcf2df6e4f9975ef0dc62311a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Boden_Wohnzimmer_Texture
+    second: {fileID: 2100000, guid: c0db5dcb5249af746bc3064683a9d79d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Decke_1_Texture
+    second: {fileID: 2100000, guid: f3332cd580578d141b9bc48180c47335, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Decke_2_Texture
+    second: {fileID: 2100000, guid: 73268203ba17eaf4b8f8ad7fa85d3dff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Heizung_Texture
+    second: {fileID: 2100000, guid: 00a4bb60a103aa74a92292908ca48c7d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Lampe_Texture
+    second: {fileID: 2100000, guid: ace17d40e7c4b3f4babef52f4979bb7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Lampe_Tisch_Texture
+    second: {fileID: 2100000, guid: 4ba22e3a4b5ae0d4794a86f4fba3afcf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_MausPad_Texture
+    second: {fileID: 2100000, guid: b3d2aadd4412ccc45baa77631c5d2f32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Monitor_Texture
+    second: {fileID: 2100000, guid: 4a57923712917e14eb3b4580d94b7cb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Radio_Texture
+    second: {fileID: 2100000, guid: 31c7a822c71fd564b88d039a319a2d4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Rahmen_Texture
+    second: {fileID: 2100000, guid: 802a9bf8059391e4c937826448f3284c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Rechner_Texture
+    second: {fileID: 2100000, guid: 88eb1e656e903f64798a117818f594ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Rohre_1_Texture
+    second: {fileID: 2100000, guid: 7c095c80edf22da4aa518b38dacaf6b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Schrank_Klein_Texture
+    second: {fileID: 2100000, guid: 7719b76904cb13c4c8a83ce67334ba54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Schrank_Texture
+    second: {fileID: 2100000, guid: 908f6aa7821068049ba1c546a4e018d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Sessel_Gross_Texture
+    second: {fileID: 2100000, guid: 74f7e9d5f1a5b844d87317150203451d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Sofa_Texture
+    second: {fileID: 2100000, guid: 1e5efc5a1fdf2ee47bb48cc24dc89e45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Stuhl_Texture
+    second: {fileID: 2100000, guid: 3c48870beb280f7408cd67327cc88b76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Tastatur_Texture
+    second: {fileID: 2100000, guid: b6126a03561135d43a1f41b21d2e23d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Tisch_1_Texture
+    second: {fileID: 2100000, guid: c9fbcdded179836408ee79070f87b322, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Tisch_2_Texture
+    second: {fileID: 2100000, guid: 55dd23930f354bb45bbad8d90683b5bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Tisch_Texture
+    second: {fileID: 2100000, guid: 5f9a873f47d7a284f9a9125edc8513cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Tuer_1_Texture
+    second: {fileID: 2100000, guid: 65f1bee43c46c664eb65fb33eb2b9da8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Tuer_2_Texture
+    second: {fileID: 2100000, guid: 0f4fb99bbecb6044596e53f8283b908d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The_Lab_prefab_Tuer_Rahmen_Texture
+    second: {fileID: 2100000, guid: fc9c8f63ea933614aad65671b5258948, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
