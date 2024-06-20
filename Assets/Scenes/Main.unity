@@ -2389,7 +2389,7 @@ MonoBehaviour:
   - WallU: 0
     WallV: 0
     AnchorUV: 0
-  Labels: 65439
+  Labels: 16287
 --- !u!114 &1240914181
 MonoBehaviour:
   m_ObjectHideFlags: 0
