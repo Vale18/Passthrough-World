@@ -6,9 +6,10 @@ using UnityEngine;
 using Meta.XR.MRUtilityKit;
 using UnityEngine.AI;
 
-public class NavMeshBaker : MonoBehaviour
+public class NavMeshHandler : MonoBehaviour
 { 
     private NavMeshSurface navMeshSurface;
+    public NavMeshObstacle navMeshDoorObstacle;
     void Awake()
     {
        navMeshSurface = GetComponent<NavMeshSurface>();
