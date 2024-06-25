@@ -1251,6 +1251,26 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 1334328790937400294, guid: 518e0e13ce319784da4b2f689707a2bf,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: -1.7248
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334328790937400294, guid: 518e0e13ce319784da4b2f689707a2bf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334328790937400294, guid: 518e0e13ce319784da4b2f689707a2bf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334328790937400294, guid: 518e0e13ce319784da4b2f689707a2bf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.9
+      objectReference: {fileID: 0}
     - target: {fileID: 1376600608891392020, guid: 518e0e13ce319784da4b2f689707a2bf,
         type: 3}
       propertyPath: m_CastShadows
@@ -1311,6 +1331,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d05e44a332235f9449e628c61ed38495, type: 2}
+    - target: {fileID: 3466927092005389042, guid: 518e0e13ce319784da4b2f689707a2bf,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3642219749535518453, guid: 518e0e13ce319784da4b2f689707a2bf,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1494,10 +1519,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8310229450854649908}
-    - targetCorrespondingSourceObject: {fileID: -1883921197825285649, guid: 518e0e13ce319784da4b2f689707a2bf,
+    - targetCorrespondingSourceObject: {fileID: -507060160893534088, guid: 518e0e13ce319784da4b2f689707a2bf,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7142689260187033870}
+      addedObject: {fileID: 8743300102634415995}
   m_SourcePrefab: {fileID: 100100000, guid: 518e0e13ce319784da4b2f689707a2bf, type: 3}
 --- !u!4 &1359647340591616016 stripped
 Transform:
@@ -1554,20 +1579,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912951fd32f725742be80e669add36c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navMeshDoorObstacle: {fileID: 7142689260187033870}
---- !u!1 &8110489071671989780 stripped
+  navMeshDoorObstacle: {fileID: 0}
+--- !u!1 &7899953697932294019 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: -1883921197825285649, guid: 518e0e13ce319784da4b2f689707a2bf,
+  m_CorrespondingSourceObject: {fileID: -507060160893534088, guid: 518e0e13ce319784da4b2f689707a2bf,
     type: 3}
   m_PrefabInstance: {fileID: 1537074855939799035}
   m_PrefabAsset: {fileID: 0}
---- !u!208 &7142689260187033870
+--- !u!208 &8743300102634415995
 NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8110489071671989780}
+  m_GameObject: {fileID: 7899953697932294019}
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1

@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class OutsideSpawner : MonoBehaviour
+public class VirtualSpaceSpawner : MonoBehaviour
 {
-    public GameObject prefabToPlace;
-
+    [FormerlySerializedAs("prefabToPlace")] public GameObject outsideEnvironment;
+    public GameObject insideEnvironment;
+    
     // Start is called before the first frame update
     void Start()
     {
-        PlacePrefab();
+        if(outsideEnvironment != null)
+            PlacePrefab(outsideEnvironment);
+        if(insideEnvironment != null)
+            PlacePrefab(insideEnvironment);
     }
 
     // Update is called once per frame
@@ -17,10 +22,11 @@ public class OutsideSpawner : MonoBehaviour
     {
         
     }
-    private void PlacePrefab()
+    private void PlacePrefab(GameObject prefabToPlace)
     {
         Vector3 thisPosition = transform.position;
         thisPosition.y = 0.0f;
+        thisPosition.y += prefabToPlace.transform.position.y;
         Quaternion thisRotation = Quaternion.Euler(0.0f, transform.rotation.eulerAngles.y, 0.0f);
         Instantiate(prefabToPlace, thisPosition, thisRotation);
     }

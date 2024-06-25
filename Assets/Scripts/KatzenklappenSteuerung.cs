@@ -2,47 +2,58 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class KatzenklappenSteuerung : MonoBehaviour
 {
     private Animator animator;
-    
+    private NavMeshAgent catAgent;
+    private GameObject cat;
+    private bool isUsingOffMeshLink = false;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        cat = GameObject.FindWithTag("Cat");
+        catAgent = cat.GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("OnTriggerEnter" + other.tag + other.name);
-        if (other.CompareTag("Cat"))
+        if (catAgent.isOnOffMeshLink && !isUsingOffMeshLink)
         {
-            Debug.Log("OnTriggerEnter");
-            if (other.transform.position.z < transform.position.z)
-            {
-                animator.SetTrigger("OpenFront");
-            }
-            else
-            {
-                animator.SetTrigger("OpenBack");
-            }
+            // Der Agent hat gerade begonnen, den Off-Mesh Link zu benutzen
+            isUsingOffMeshLink = true;
+            OnAgentStartUsingLink();
+        }
+        else if (!catAgent.isOnOffMeshLink && isUsingOffMeshLink)
+        {
+            // Der Agent hat gerade den Off-Mesh Link verlassen
+            isUsingOffMeshLink = false;
+            StartCoroutine(OnAgentStopUsingLink());
         }
     }
 
-    void OnTriggerExit(Collider other)
+    void OnAgentStartUsingLink()
     {
-        Debug.Log("OnTriggerExit");
-        if (other.CompareTag("Cat"))
+        Vector3 direction = catAgent.currentOffMeshLinkData.endPos - catAgent.currentOffMeshLinkData.startPos;
+
+        if (Vector3.Dot(transform.forward, direction) < 0)
         {
-            animator.SetTrigger("CloseFront");
-            animator.SetTrigger("CloseBack");
+            animator.SetTrigger("OpenFront");
+        }
+        else
+        {
+            animator.SetTrigger("OpenBack");
         }
     }
+
+    IEnumerator OnAgentStopUsingLink()
+    {
+        yield return new WaitForSeconds(1);
+        animator.SetTrigger("CloseFront");
+        animator.SetTrigger("CloseBack");
+    }
+  
 }
