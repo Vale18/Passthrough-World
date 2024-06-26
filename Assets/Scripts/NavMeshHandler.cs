@@ -18,6 +18,7 @@ public class NavMeshHandler : MonoBehaviour
     void Start()
     {
         BakeNavMesh();
+        GetComponent<SpawnAgent>().SpawnAgentCat();
     }
     [ContextMenu("BakeNavMesh")]
     public void BakeNavMesh()

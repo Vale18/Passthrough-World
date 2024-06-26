@@ -10,17 +10,23 @@ public class KatzenklappenSteuerung : MonoBehaviour
     private NavMeshAgent catAgent;
     private GameObject cat;
     private bool isUsingOffMeshLink = false;
+
+    private bool catFound = false;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        cat = GameObject.FindWithTag("Cat");
-        catAgent = cat.GetComponent<NavMeshAgent>();
+        SpawnAgent.OnCatInitialized += FindCatInScene;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!catFound)
+        {
+            Debug.Log("NotFound");
+            return;
+        }
         if (catAgent.isOnOffMeshLink && !isUsingOffMeshLink)
         {
             // Der Agent hat gerade begonnen, den Off-Mesh Link zu benutzen
@@ -34,7 +40,25 @@ public class KatzenklappenSteuerung : MonoBehaviour
             StartCoroutine(OnAgentStopUsingLink());
         }
     }
-
+    /// <summary>
+    /// Wait until Room and cat are initialized before searching scene for cat
+    /// </summary>
+    /// <returns></returns>
+    void FindCatInScene()
+    {
+        cat = GameObject.FindWithTag("Cat");
+        if (cat != null)
+        {
+            catAgent = cat.GetComponent<NavMeshAgent>();
+            catFound = true;
+            Debug.Log("Cat found in scene.");
+            SpawnAgent.OnCatInitialized -= FindCatInScene;
+        }
+        else
+        {
+            Debug.LogWarning("Cat not found in scene.");
+        }
+    }
     void OnAgentStartUsingLink()
     {
         Vector3 direction = catAgent.currentOffMeshLinkData.endPos - catAgent.currentOffMeshLinkData.startPos;

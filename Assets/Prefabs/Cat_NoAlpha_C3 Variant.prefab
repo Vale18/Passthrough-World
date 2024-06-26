@@ -253,6 +253,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat_NoAlpha_C3 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2252542973852570827, guid: 9a5c94b4f44c4a94cb47197211eb2517,
+        type: 3}
+      propertyPath: m_TagString
+      value: Cat
+      objectReference: {fileID: 0}
     - target: {fileID: 2465851653648498035, guid: 9a5c94b4f44c4a94cb47197211eb2517,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -861,7 +866,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 0.35
-  m_Speed: 0.2
+  m_Speed: 0.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
