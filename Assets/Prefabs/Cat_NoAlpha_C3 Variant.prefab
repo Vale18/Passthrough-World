@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 1443811921231384177, guid: 9a5c94b4f44c4a94cb47197211eb2517,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.01
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 1443811921231384177, guid: 9a5c94b4f44c4a94cb47197211eb2517,
         type: 3}
@@ -828,6 +828,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 942947329425448321}
+    - targetCorrespondingSourceObject: {fileID: 2252542973852570827, guid: 9a5c94b4f44c4a94cb47197211eb2517,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6748409342881528180}
+    - targetCorrespondingSourceObject: {fileID: 2252542973852570827, guid: 9a5c94b4f44c4a94cb47197211eb2517,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3715436879726975806}
   m_SourcePrefab: {fileID: 100100000, guid: 9a5c94b4f44c4a94cb47197211eb2517, type: 3}
 --- !u!1 &4836509222742840902 stripped
 GameObject:
@@ -902,3 +910,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9e496aa290d694c9847e65178c27ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6748409342881528180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4836509222742840902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c127bc60f0be40d40aa850b7ac7b7487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3715436879726975806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4836509222742840902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03c851940497901448407482c188b251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 6614371689900375651}
+  lookAtTargetPosition: {x: 0, y: 0, z: 0}
+  lookAtCoolTime: 0.2
+  lookAtHeatTime: 0.2
+  looking: 1
+--- !u!4 &6614371689900375651 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 546871128218238190, guid: 9a5c94b4f44c4a94cb47197211eb2517,
+    type: 3}
+  m_PrefabInstance: {fileID: 6655221172150731405}
+  m_PrefabAsset: {fileID: 0}
