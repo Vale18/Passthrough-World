@@ -3,33 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class FollowTarget : ICatAction
+public class GoToTarget : ICatAction
 {
     private bool isComplete = false;
     public bool IsComplete => isComplete;
-    private GameObject target;
+    private Vector3 target;
     UnityEngine.AI.NavMeshAgent agent;
 
     public void AwakeAction(NavMeshAgent agent, params object[] parameters)
     {
         this.agent = agent;
+        target = (Vector3)parameters[0];
     }
     public void StartAction()
     {
-        target = GameObject.FindWithTag("MainCamera");
+        agent.destination = target;
     }
 
     public void UpdateAction()
     {
-        Vector3 infrontOfTarget = target.transform.position + target.transform.forward * 0.3f;
-        agent.destination = infrontOfTarget;
-        // Aktualisiere die Aktion
-        // Setze isComplete auf true, wenn die Aktion beendet ist
+        if (agent.remainingDistance <= 0)
+        {
+            FinishAction();
+        }
     }
 
     public void FinishAction()
     {
         isComplete = true;
     }
-    
 }
