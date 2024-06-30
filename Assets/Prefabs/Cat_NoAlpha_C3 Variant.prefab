@@ -832,6 +832,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5068685281643561630}
+    - targetCorrespondingSourceObject: {fileID: 2252542973852570827, guid: 9a5c94b4f44c4a94cb47197211eb2517,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5585017802260773886}
   m_SourcePrefab: {fileID: 100100000, guid: 9a5c94b4f44c4a94cb47197211eb2517, type: 3}
 --- !u!1 &4836509222742840902 stripped
 GameObject:
@@ -918,7 +922,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4836509222742840902}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 919299c05c914070ad3fc7d4e3b0d9f0, type: 3}
   m_Name: 
@@ -926,6 +930,18 @@ MonoBehaviour:
   wanderRadius: 4
   wanderInterval: 3
   navMeshAreaName: Wandering
+--- !u!114 &5585017802260773886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4836509222742840902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8698176fc7400686fd7b83166d011a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6614371689900375651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 546871128218238190, guid: 9a5c94b4f44c4a94cb47197211eb2517,

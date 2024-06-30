@@ -27,7 +27,7 @@ public class SpawnAgent : MonoBehaviour
     }
     private IEnumerator InvokeInitializationEvent()
     {
-        // Warte einen Frame, um sicherzustellen, dass das GameObject vollständig initialisiert ist
+        // Wait one frame to make sure, cat is initialized
         yield return null;
         OnCatInitialized?.Invoke();
     }

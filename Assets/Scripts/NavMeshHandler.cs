@@ -9,7 +9,6 @@ using UnityEngine.AI;
 public class NavMeshHandler : MonoBehaviour
 { 
     private NavMeshSurface navMeshSurface;
-    public NavMeshObstacle navMeshDoorObstacle;
     void Awake()
     {
        navMeshSurface = GetComponent<NavMeshSurface>();
