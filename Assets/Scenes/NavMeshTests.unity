@@ -132,21 +132,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3715436879726975806, guid: f48d2d52fc839d746ac8d7c360549c7a,
-        type: 3}
-      propertyPath: looking
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3715436879726975806, guid: f48d2d52fc839d746ac8d7c360549c7a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4296291321681166303, guid: f48d2d52fc839d746ac8d7c360549c7a,
-        type: 3}
-      propertyPath: m_UpdateMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4836509222742840902, guid: f48d2d52fc839d746ac8d7c360549c7a,
         type: 3}
       propertyPath: m_Name
@@ -953,17 +938,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TheLabFinal 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2277246549821734554, guid: 227d944fe62c9544dbdbfcc97130be6a,
-        type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 23800000, guid: 3691e722ab9c61345b0da6aafa52365d,
-        type: 2}
-    - target: {fileID: 8310229450854649908, guid: 227d944fe62c9544dbdbfcc97130be6a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
