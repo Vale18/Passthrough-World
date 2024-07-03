@@ -1,22 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class FollowTarget : MonoBehaviour
+public class FollowTarget : ICatAction
 {
+    private bool isComplete = false;
+    public bool IsComplete => isComplete;
     private GameObject target;
-    UnityEngine.AI.NavMeshAgent agent;
-    // Start is called before the first frame update
-    void Start()
+    NavMeshAgent agent;
+    private LookAt lookAt;
+
+    public void AwakeAction(NavMeshAgent agent, params object[] parameters)
     {
-        target = GameObject.FindWithTag("MainCamera");
-        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        this.agent = agent;
+        lookAt = agent.GameObject().GetComponent<LookAt>();
+    }
+    public void StartAction()
+    {
+        var mainCameraList = GameObject.FindGameObjectsWithTag("MainCamera");
+        foreach (var mainCamera in mainCameraList)
+        {
+            if (mainCamera.name == "CenterEyeAnchor");
+                target = mainCamera;
+        }
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateAction()
     {
         Vector3 infrontOfTarget = target.transform.position + target.transform.forward * 0.3f;
         agent.destination = infrontOfTarget;
+        // Aktualisiere die Aktion
+        // Setze isComplete auf true, wenn die Aktion beendet ist
     }
+
+    public void FinishAction()
+    {
+        isComplete = true;
+    }
+    
 }

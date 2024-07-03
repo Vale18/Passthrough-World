@@ -75,7 +75,7 @@ public class KatzenklappenSteuerung : MonoBehaviour
 
     IEnumerator OnAgentStopUsingLink()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         animator.SetTrigger("CloseFront");
         animator.SetTrigger("CloseBack");
     }
