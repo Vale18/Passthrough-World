@@ -241,7 +241,7 @@ Transform:
   m_GameObject: {fileID: 2626114318846997554}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.986, y: 0.288, z: -0.428}
+  m_LocalPosition: {x: -0.04, y: 0.288, z: -0.865}
   m_LocalScale: {x: 0.10023202, y: 0.10023202, z: -0.10023202}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -596,7 +596,7 @@ Transform:
   m_GameObject: {fileID: 4669684389376017809}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.469, y: 0.43, z: -0.392}
+  m_LocalPosition: {x: 3.817, y: 0.43, z: -0.392}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -636,8 +636,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.4401016, y: 2.0056622, z: 1.0994221}
-  m_Center: {x: -0.23551273, y: 0.57093346, z: 0.11781329}
+  m_Size: {x: 3.652964, y: 2.0056622, z: 1.0994221}
+  m_Center: {x: -0.34194398, y: 0.57093346, z: 0.11781329}
 --- !u!114 &2809949149389864531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1862,7 +1862,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912951fd32f725742be80e669add36c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navMeshDoorObstacle: {fileID: 8743300102634415995}
 --- !u!114 &2886080496044319895
 MonoBehaviour:
   m_ObjectHideFlags: 0
