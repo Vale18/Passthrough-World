@@ -1921,12 +1921,12 @@ PrefabInstance:
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
       propertyPath: SceneSettings.RoomIndex
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
       propertyPath: SceneSettings.RoomPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
@@ -1950,7 +1950,7 @@ PrefabInstance:
         type: 3}
       propertyPath: SceneSettings.RoomPrefabs.Array.data[3]
       value: 
-      objectReference: {fileID: 5618556046422172173, guid: caa3755f1f2184eb7a9fd17b7cf1f1d3,
+      objectReference: {fileID: 6631284343627542269, guid: 6997940f7b90a9c44bcaea50e318f8eb,
         type: 3}
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
@@ -2489,7 +2489,7 @@ MonoBehaviour:
     IgnorePrefabSize: 0
   - Labels: 64
     Prefabs:
-    - {fileID: 3805901535633295359, guid: 838229c14eff6ca4cb6fa56f521c773a, type: 3}
+    - {fileID: 8218886822621533186, guid: 825ebc48eed27c343844fcada719752e, type: 3}
     PrefabSelection: 0
     MatchAspectRatio: 0
     CalculateFacingDirection: 1

@@ -32,12 +32,13 @@ public class DoorHandler : ICatAction
         {
             waitForSitDown = true;
             catAnimator.SetTrigger("SitDown");
+            agent.updatePosition = false;
         }
         if (waitForSitDown) //Check if sitdown finished
         {
             if (catAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 2.0f)
             {
-                doorAnimator.SetTrigger("OpenDoor");
+                /*doorAnimator.SetTrigger("OpenDoor");*/
                 FinishAction();
             }
         }

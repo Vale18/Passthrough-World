@@ -7,20 +7,29 @@ public class VirtualSpaceSpawner : MonoBehaviour
 {
     [FormerlySerializedAs("prefabToPlace")] public GameObject outsideEnvironment;
     public GameObject insideEnvironment;
-    
+    private static HashSet<string> instantiatedPrefabs = new HashSet<string>();
     // Start is called before the first frame update
     void Start()
     {
         if(outsideEnvironment != null)
-            PlacePrefab(outsideEnvironment);
+            TryPlacePrefab(outsideEnvironment);
         if(insideEnvironment != null)
-            PlacePrefab(insideEnvironment);
+            TryPlacePrefab(insideEnvironment);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    private void TryPlacePrefab(GameObject prefabToPlace)
+    {
+        string prefabName = prefabToPlace.name;
+        if (!instantiatedPrefabs.Contains(prefabName))
+        {
+            instantiatedPrefabs.Add(prefabName);
+            PlacePrefab(prefabToPlace);
+        }
     }
     private void PlacePrefab(GameObject prefabToPlace)
     {
