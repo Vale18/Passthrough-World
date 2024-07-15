@@ -1,4 +1,4 @@
-// LocomotionSimpleAgent.cs
+// LocomotionSimpleAgent.cs (Class from Unity Documentation)
 using UnityEngine;
 using UnityEngine.AI;
 

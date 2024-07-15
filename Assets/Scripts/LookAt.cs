@@ -1,4 +1,4 @@
-// LookAt.cs
+// LookAt.cs (Class from Unity Documentation)
 using UnityEngine;
 using System.Collections;
 
