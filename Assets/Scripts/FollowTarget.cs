@@ -32,7 +32,6 @@ public class FollowTarget : ICatAction
     {
         Vector3 infrontOfTarget = target.transform.position + target.transform.forward * 0.3f;
         agent.destination = infrontOfTarget;
-        // Aktualisiere die Aktion
         // Setze isComplete auf true, wenn die Aktion beendet ist
     }
 
